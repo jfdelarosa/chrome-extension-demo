@@ -1,0 +1,17 @@
+{
+  "name": "Hello world! (advanced)",
+  "description": "Mi segunda extensión",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Descripción",
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.google.com/*"],
+      "js": ["src/content_script.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
